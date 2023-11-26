@@ -46,7 +46,7 @@ Object.values(JSON.parse(localStorage.getItem("selection"))).filter(e=>e==null).
 
 let accomplished=false
 
-$: saveSelection(selection)
+$: typeof window !== 'undefined' && selection && saveSelection(selection)
 
 </script>
 
